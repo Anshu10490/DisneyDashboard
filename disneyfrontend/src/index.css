@@ -1,0 +1,298 @@
+/* -------------------- 🩷 Base Styling (Bootstrap Friendly) -------------------- */
+body {
+  margin: 0;
+  font-family: 'Comic Neue', cursive, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fff0f5;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* -------------------- ✨ Disney Fonts -------------------- */
+.disney-font {
+  font-family: 'Princess Sofia', cursive !important;
+}
+
+.handwritten {
+  font-family: 'Caveat', cursive !important;
+}
+
+/* -------------------- ⭐ Falling Stars -------------------- */
+.falling-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  top: -10px;
+  background-color: gold;
+  border-radius: 50%;
+  opacity: 0.85;
+  box-shadow: 0 0 10px gold;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+/* -------------------- 🧚 Pixie Dust Trail -------------------- */
+.pixie {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #ffc8f8, #ff6fdc);
+  border-radius: 50%;
+  opacity: 0.9;
+  animation: fadeOut 1s forwards;
+  pointer-events: none;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+
+/* -------------------- 🌈 Barbie Gradient Animation -------------------- */
+@keyframes barbieGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* -------------------- 💫 Magic Nav Active -------------------- */
+.active-magic {
+  font-weight: bold;
+  color: #ffb6ea !important;
+  text-shadow:
+    0 0 8px #ffb6ea,
+    0 0 12px #ddbaff,
+    0 0 16px #ff6ec4;
+  animation: glowMagic 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowMagic {
+  from {
+    text-shadow: 0 0 6px #ffb6ea;
+  }
+  to {
+    text-shadow: 0 0 16px #ff6ec4, 0 0 20px #ddbaff;
+  }
+}
+
+/* -------------------- 🌙 Theme Backgrounds -------------------- */
+.night-bg {
+  background: linear-gradient(180deg, #1e1e3f, #3e2760);
+  color: #f3e9ff;
+}
+
+.day-bg {
+  background: linear-gradient(135deg, #fff0f5, #ffe1f0, #f9ccff);
+  color: #5d3a00;
+}
+
+/* -------------------- 🪄 Magical Button -------------------- */
+.btn-magic {
+  background-color: #ff69b4;
+  color: white;
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  border: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #ffb6ea;
+}
+
+.btn-magic:hover {
+  background-color: #ff85c1;
+  box-shadow: 0 0 16px #ff6ec4, 0 0 24px #ddbaff;
+  transform: scale(1.05);
+}
+
+.day-bg {
+  background: linear-gradient(to bottom, #ffe0f0, #fffafc);
+  color: #2d003d;
+}
+
+.night-bg {
+  background: linear-gradient(to bottom, #1f1b2e, #2c235b);
+  color: #f0e8ff;
+}
+
+.confetti-popper {
+  position: fixed;
+  top: 50%;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: radial-gradient(circle, #ff69b4 20%, transparent 20%),
+    radial-gradient(circle, #ba55d3 20%, transparent 20%),
+    radial-gradient(circle, #ffd700 20%, transparent 20%),
+    radial-gradient(circle, #adff2f 20%, transparent 20%);
+  background-size: 10px 10px;
+  background-repeat: repeat;
+  opacity: 0;
+  animation: confettiBurst 2.5s ease-out forwards;
+}
+
+.left-popper {
+  left: 0;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.right-popper {
+  right: 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+@keyframes confettiBurst {
+  0% {
+    opacity: 1;
+    transform: scale(0.5) translateY(-50%);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.2) translateY(-100%);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-200%);
+  }
+}
+
+.hero-card {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.4s ease;
+  font-family: 'Caveat', cursive;
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
+.hero-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px var(--heroColor), 0 0 20px var(--heroColor);
+  background-color: var(--heroColor);
+  color: white;
+}
+.magic-link {
+  display: inline-block;
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+  color: #4B0082;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.magic-link:hover {
+  background-color: #ffe1f0;
+  color: #BA55D3;
+  box-shadow: 0 0 12px #ffb6ea, 0 0 24px #ddbaff;
+  transform: scale(1.05) translateY(-2px);
+}
+.moral-card {
+  border: 2px dashed #ffb6ea;
+  box-shadow: 0 0 15px #ffe1f0;
+  animation: floatUp 6s ease-in-out infinite;
+  border-radius: 18px;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.glowing-moral-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+  animation: glowText 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 6px #f7bfff, 0 0 12px #ddbaff;
+  }
+  to {
+    text-shadow: 0 0 12px #ffb6ea, 0 0 24px #c9b6ff;
+  }
+}
+.moral-card::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+  animation: sparkle 12s infinite linear;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(10px) translateY(-10px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+@keyframes moralGlow {
+  0%, 100% {
+    text-shadow: 0 0 4px #ffb3da, 0 0 10px #ff69b4, 0 0 16px #d1006f;
+  }
+  50% {
+    text-shadow: 0 0 6px #ff80c0, 0 0 12px #ff1493, 0 0 20px #d1006f;
+  }
+}
+@keyframes popSlide {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
