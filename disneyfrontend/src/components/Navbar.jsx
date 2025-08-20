@@ -19,8 +19,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className="navbar navbar-expand-lg shadow-sm sticky-top"
-      style={{ backgroundColor: backgroundColor, transition: '0.4s ease' }}
+    className="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top"
+    style={{ backgroundColor: backgroundColor, transition: '0.4s ease' }}
     >
       <div className="container">
         <NavLink className="navbar-brand d-flex align-items-center" to="/">
@@ -45,6 +45,9 @@ export default function Navbar() {
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>

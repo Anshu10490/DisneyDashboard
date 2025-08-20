@@ -53,7 +53,7 @@ export default function About() {
           <strong>DisneyWorld</strong> is a mystical movieverse that brings fairytales, magic, and timeless
           Disney nostalgia into your world. Explore a portal where memories glow, characters inspire,
           and every story whispers a dream. Whether it’s soaring with Aladdin or standing tall like Moana,
-          this world reminds you — magic is real, and it starts with a story. ✨📽️
+          this world reminds you — magic is real, and it starts with a story. ✨
         </p>
 
         <div className="row g-4 mb-5">

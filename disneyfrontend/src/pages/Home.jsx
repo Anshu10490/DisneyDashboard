@@ -69,7 +69,7 @@ export default function Home() {
           color: isNight ? "#ffccf9" : "#ff4da6",
           textShadow: "0px 0px 8px rgba(255,105,180,0.6)",
           fontFamily: "'Caveat', cursive",
-        }}>🍓 Enchanted Memories</h2>
+        }}>🍉 Enchanted Memories</h2>
         <div className="row">
           {images.map((img, index) => (
             <div className="col-6 col-md-4 col-lg-3 mb-4" key={index}>

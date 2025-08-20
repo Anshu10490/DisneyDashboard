@@ -246,6 +246,8 @@ code {
   animation: glowText 2.5s ease-in-out infinite alternate;
 }
 
+
+
 @keyframes glowText {
   from {
     text-shadow: 0 0 6px #f7bfff, 0 0 12px #ddbaff;
@@ -296,3 +298,35 @@ code {
     opacity: 1;
   }
 }
+
+/* For navbar links */
+.nav-link {
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ff6f61 !important; /* Disney-style coral */
+  transform: translateY(-2px);
+}
+
+.active-magic {
+  font-weight: bold;
+  border-bottom: 2px solid #ff6f61;
+  color: #ff6f61 !important;
+}
+
+/* For buttons */
+.navbar .btn {
+  border-radius: 30px;
+  padding: 6px 18px;
+  transition: all 0.3s ease;
+}
+
+.navbar .btn:hover {
+  background: #ff6f61;
+  color: white !important;
+  transform: scale(1.05);
+}
+
